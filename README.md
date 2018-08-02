@@ -2,6 +2,8 @@ Aron
 --
 __Aron__ is a simple GO script for finding hidden GET &amp; POST parameters with bruteforce.
 
+![screen](https://i.imgur.com/e1iEOXP.png)
+
 Installation
 --
 
