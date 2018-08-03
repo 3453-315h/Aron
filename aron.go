@@ -135,7 +135,6 @@ func Request(url string, method string, data string, payload string) {
 		// 2 req content
 		real_url := JoinGet(url,payload)
 		s_content,s_url := Get(real_url)
-		fmt.Printf("%s\n",s_url)
 		if s_content != f_content {
 			if s_url == real_url {
 				printer.Info("Found a potentially valid parameter: ",false)
