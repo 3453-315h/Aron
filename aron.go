@@ -135,6 +135,7 @@ func Request(url string, method string, data string, payload string) {
 		// 2 req content
 		real_url := JoinGet(url,payload)
 		s_content,s_url := Get(real_url)
+		fmt.Printf("%s\n",s_url)
 		if s_content != f_content {
 			if s_url == real_url {
 				printer.Info("Found a potentially valid parameter: ",false)
@@ -154,7 +155,11 @@ func Get(url string) (string,string) {
 	req,err := http.NewRequest("GET",url,nil)
 	req.Header.Set("User-Agent","Mozilla/5.0")
 	// client
-	client := &http.Client{}
+	client := &http.Client{
+		CheckRedirect: func(req *http.Request, via []*http.Request) error {
+			return http.ErrUseLastResponse
+			},
+	}
 	resp, err := client.Do(req)
 	if err != nil {
 		panic(err)
@@ -175,7 +180,11 @@ func Post(url string, data string) (string,string) {
 	req, err := http.NewRequest("POST",url,bytes.NewBuffer(post_data))
 	req.Header.Set("User-Agent","Mozilla/5.0")
 	// client
-	client := &http.Client{}
+	client := &http.Client{
+		CheckRedirect: func(req *http.Request, via []*http.Request) error {
+			return http.ErrUseLastResponse
+		},
+	}
 	resp,err := client.Do(req)
 	if err != nil {
 		panic(err)
