@@ -15,6 +15,8 @@ $ go get github.com/m4ll0k/printer
 $ go env | grep -i gopath
 # if $GOPATH not set, try with:
 $ export GOPATH=$HOME/go
+$ go run aron.go
+# OR 
 $ go build aron.go
 $ cp aron /usr/bin/
 $ aron
