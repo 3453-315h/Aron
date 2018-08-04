@@ -66,7 +66,9 @@ $ go run aron.go -url http://www.test.com/index.php<[?id=1]> -post
 $ go run aron.go -url http://www.test.com/index.php<[?id=1]> -post -data "user=1"
 $ go run aron.go -url http://www.test.com/index.php<[?id=1]> -post -data "user=1" -wordlist my_wordlist
 ```
+
 **OR** __Note:__ in this case aron need the wordlist path 
+
 ```sh
 $ aron -url http://www.test.com/index.php -post -wordlist path/wordlist.txt
 $ aron -url http://www.test.com/index.php<[?id=1]> -post -data "user=1" -wordlist path/wordlist.txt
