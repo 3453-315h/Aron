@@ -35,16 +35,11 @@ Usage
   Momo (M4ll0k) Outaadi 
 
 Usage of aron:
-  -data="": 
-		Set post data
-  -get=false: 
-		Set get method
-  -post=false: 
-		Set post method
-  -url="": 
-		Set target URL
-  -wordlist="dict.txt": 
-		Set your wordlist
+  -data="":             Set post data
+  -get=false:           Set get method
+  -post=false:          Set post method
+  -url="":              Set target URL
+  -wordlist="dict.txt": Set your wordlist
 ```
 
 __GET BRUTEFORCE:__
