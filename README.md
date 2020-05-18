@@ -34,31 +34,16 @@ Usage of ./aron:
 __GET BRUTEFORCE:__
 
 ```sh
-$ go run aron.go -u http://www.test.com/index.php -g 
-$ go run aron.go -u http://www.test.com/index.php<[?|id=1|id=1&]> -g
-$ go run aron.go -u http://www.test.com/index.php<[?|id=1|id=1&]> -g -w my_wordlist.txt
-```
-
-_<[?|id=1|id=1&]>_ **=> Possible end URL**
-
-**OR** __Note:__ in this case aron need the wordlist path 
-```sh
-$ aron -u http://www.test.com/index.php -g -w path/wordlist.txt
-$ aron -u http://www.test.com/index.php<[?|id=1|id=1&]> -g -w path/wordlist.txt
+$ ./aron -u http://www.test.com/index.php -g 
+$ ./aron -u http://www.test.com/index.php<[?|id=1|id=1&]> -g
+$ ./aron -u http://www.test.com/index.php<[?|id=1|id=1&]> -g -w my_wordlist.txt
 ```
 
 __POST BRUTEFORCE:__
 
 ```sh
-$ go run aron.go -u http://www.test.com/index.php -p
-$ go run aron.go -u http://www.test.com/index.php<[?id=1]> -p
-$ go run aron.go -u http://www.test.com/index.php<[?id=1]> -p -d "user=1"
-$ go run aron.go -u http://www.test.com/index.php<[?id=1]> -p -d "user=1" -wordlist my_wordlist
-```
-
-**OR** __Note:__ in this case aron need the wordlist path 
-
-```sh
-$ aron -u http://www.test.com/index.php -p -w path/wordlist.txt
-$ aron -u http://www.test.com/index.php<[?id=1]> -p -d "user=1" -w path/wordlist.txt
+$ ./aron -u http://www.test.com/index.php -p #basic fuzz with post method 
+$ ./aron -u http://www.test.com/index.php<[?id=1]> -p -d "user=1" #set post data
+$ ./aron -u http://www.test.com/index.php<[?id=1]> -p -d "user=1" -H 'cookie: test=20,x-header: 10' #set headers name:value,name:value,...
+$ ./aron -u http://www.test.com/index.php<[?|id=1|id=1&]> -p -d "user=1" -w my_wordlist.txt #set wordlist
 ```
