@@ -2,7 +2,7 @@ Aron
 --
 __Aron__ is a simple GO script for finding hidden GET &amp; POST parameters with bruteforce.
 
-![screen](https://i.imgur.com/e1iEOXP.png)
+![screen](https://i.imgur.com/lryusFo.png)
 
 Installation
 --
@@ -26,20 +26,18 @@ Usage
 --
 
 ```go
-   ___                         
-   /   |  _________  ___       
-  / /| | / ___/ __ \/ __\   
- / ___ |/ /  / /_/ / / / /   
-/_/  |_/_/   \____/_/ /_/ (v0.1.0 beta)
-----------------------------
-  Momo (M4ll0k) Outaadi 
-
-Usage of aron:
-  -data="":             Set post data
-  -get=false:           Set get method
-  -post=false:          Set post method
-  -url="":              Set target URL
-  -wordlist="dict.txt": Set your wordlist
+Usage of ./aron:
+  -H string
+    			Set headers ('name:value,name:value')
+  -d string
+    			Set post data
+  -g			Set get method
+  -h			Show this Help
+  -p			Set post method
+  -u string
+    			Set target URL
+  -w string
+    			Set your wordlist (default "dict.txt")
 ```
 
 __GET BRUTEFORCE:__
